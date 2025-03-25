@@ -41,15 +41,15 @@ const Navbar = () => {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-white/80 backdrop-blur-md py-4 shadow-sm"
-          : "bg-transparent py-6"
+          : "bg-eagle-blue-900/60 backdrop-blur-md py-6"
       )}
     >
       <div className="container-padding mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-serif font-bold text-eagle-blue-900">
+          <span className="text-2xl font-serif font-bold text-white">
             Eagle Heart
           </span>
-          <span className="text-xl ml-2 font-serif text-eagle-gold-600">
+          <span className="text-xl ml-2 font-serif text-eagle-gold-400">
             Retreats
           </span>
         </Link>
@@ -63,8 +63,8 @@ const Navbar = () => {
               className={cn(
                 "px-3 py-2 text-sm font-medium relative transition-colors",
                 location.pathname === link.path
-                  ? "text-eagle-blue-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-eagle-gold-500"
-                  : "text-eagle-blue-700 hover:text-eagle-blue-900"
+                  ? "text-eagle-gold-400 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-eagle-gold-400"
+                  : "text-white hover:text-eagle-gold-200"
               )}
             >
               {link.title}
@@ -79,9 +79,9 @@ const Navbar = () => {
           aria-label={isOpen ? "Close Menu" : "Open Menu"}
         >
           {isOpen ? (
-            <X className="h-6 w-6 text-eagle-blue-900" />
+            <X className="h-6 w-6 text-white" />
           ) : (
-            <Menu className="h-6 w-6 text-eagle-blue-900" />
+            <Menu className="h-6 w-6 text-white" />
           )}
         </button>
       </div>
